@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrtion Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script>function registrationValidaton() {
+        var fname = document.registrationForm.fname.value;
+        var mname = document.registrationForm.mname.value;
+        var lname = document.registrationForm.lname.value;
+        var email = document.registrationForm.email.value;
+        fi = email.indexOf("@");
+        li = email.lastIndexOf(".");
+        var password = document.registrationForm.password.value;
+        var cpassword = document.registrationForm.cpassword.value;
+
+        if (fname.length < 5 || fname.length > 20) {
+            alert(" first name should be more than 5 charecters");
+            return false;
+
+
+        }
+        if (mname.length < 5 || fname.length > 20) {
+            alert("middle name should be more than 5 charecters");
+            return false;
+        }
+        if (lname.length < 5 || lname.length > 20) {
+            alert("last name should be more than 5 charecters");
+            return false;
+
+        }
+
+        if(password.length<8){
+            alert("Password must be at least 8 characters");
+            return false;
+        }
+        if(password.length==cpassword.length){
+            alert("same password");
+            return false;
+        }
+
+
+    }
+    </script>
+</head>
+<body>
+  <div id="div1">
+      <form name="registrationForm" method="post" onsubmit="return registrationValidation()">
+          <label>First Name</label>
+          <input  type="text"class="fname"  placeholder="firstname" required><br/><br/>
+          <labe>middle Name</labe>
+          <input type="text"  class="mname" placeholder="middlename"><br/><br/>
+          <label>last Name</label>
+          <input type="text" class="lname" placeholder="lastname" required><br/><br/>
+          <label>Email</label>
+          <input type="text" class="email" placeholder="email" required><br/><br/>
+          <label>password</label>
+          <input type="text" class="password" placeholder="password" required><br/><br/>
+          <label>confirmpassword</label>
+          <input type="text" class="cpassword" placeholder="confirmpassword" required><br/><br/>
+          <button id="button1" type="submit">Registration</button>
+      </form>
+
+  </div>
+
+</body>
+</html>
