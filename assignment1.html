@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p id="result"></p>
+<div>pettals</div>
+<div>jasmine</div>
+<div>ali</div>
+<div>akki</div>
+<div>rose</div>
+<script>
+    function ss() {
+        var d = document.querySelectorAll("div");
+
+        document.getElementById("result").innerHTML = d[3].innerHTML;
+        d[0].innerHTML ="";
+    }
+    ss();
+</script>
+
+</body>
+</html>
